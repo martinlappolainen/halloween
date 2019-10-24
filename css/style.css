@@ -22,10 +22,29 @@ body{
 }
 .party{
     grid-area: party;
+    padding: 20px;
     min-height: 450px;
     background-image: url('../img/hallowen.jpg');
     background-size: cover;
     background-position: right; 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.party>*{
+    background: var(--yellow);
+    padding: 10px;
+}
+.cta{
+    background:var(--yellow);
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.cta p{
+    margin:0;
 }
 
 .cta1{
@@ -33,4 +52,20 @@ body{
 }
 .cta2{
     grid-area: cta2; 
+}
+@media(max-width:1000px){
+    .top{
+     grid-template-areas:
+    "party party"
+    " cta1 cta2";   
+    }
+    
+}
+@media(max-width:400px){
+    .top{
+        grid-template-areas:
+       "party"
+       "cta1" 
+       "cta2";   
+       }
 }
