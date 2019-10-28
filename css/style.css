@@ -36,6 +36,15 @@ body{
     background: var(--yellow);
     padding: 10px;
 }
+.menu ul{
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+}
+.menu a{
+    background: var(--yellow);
+}
 .cta{
     background:var(--yellow);
     display:grid;
